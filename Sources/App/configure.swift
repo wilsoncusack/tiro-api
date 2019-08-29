@@ -18,7 +18,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     services.register(middlewares)
 
     // Configure a SQLite database
-    let config = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "wilsoncusack", database: "tiro1", password: nil, transport: .cleartext)
+    let config = PostgreSQLDatabaseConfig(hostname: "$DATABASE_HOSTNAME", port: 5432, username: "$DATABASE_USER", database: "$DATABASE_DB", password: "$DATABASE_PASSWORD", transport: .cleartext)
     let postgres = PostgreSQLDatabase(config: config)
 
     // Register the configured SQLite database to the database config.
