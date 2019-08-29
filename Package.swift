@@ -2,9 +2,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "public-web",
+    name: "tiro-api",
     products: [
-        .library(name: "public-web", targets: ["App"]),
+        .library(name: "tiro-api", targets: ["App"]),
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
